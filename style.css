@@ -153,10 +153,22 @@ table {
   
 }
 
+body{
+  animation-name: fade-in;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+}
+
+.centered{
+  width: 100%;
+  max-width: 1500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /*START HEADER*/
 header {
   height: 50vw;
-  background-image: url("./assets/pics/header-pic.jpg");
   background-position: center center;
   background-size: 100%;
   display: flex;
@@ -164,13 +176,19 @@ header {
   align-items: flex-start;
 }
 
+#header-index {
+  background-image: url("./assets/pics/header-pic.jpg");
+}
+
+#header-classes {
+  background-image: url("./assets/pics/DSC_1207.JPG");
+}
+
 .socialmedia-bar {
   width: 150px;
   display: flex;
   justify-content: space-around;
-  animation-name: slide-fade-in;
-  animation-iteration-count: 1;
-  animation-duration: 1s;
+
 }
 
 .socialmedia-bar img {
@@ -185,7 +203,7 @@ header {
 }
 
 nav {
-  width: 100%;
+
   height: 100px;
   padding-top: 50px;
   display: flex;
@@ -195,8 +213,9 @@ nav {
   white-space: nowrap;
   margin-right: 20px;
   margin-left: 20px;
-  animation-duration: 1s;
+  animation-name: slide-fade-in;
   animation-iteration-count: 1;
+  animation-duration: 2s;
 }
 
 nav ul {
@@ -208,14 +227,12 @@ nav ul {
   flex-wrap: nowrap;
   color: white;
   font-size: 170%;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-weight: lighter;
   letter-spacing: 3px;
   margin-right: 20px;
   margin-left: 20px;
-  animation-name: slide-fade-in;
-  animation-duration: 1s;
-  animation-iteration-count: 1;
+
 }
 
 nav ul li {
@@ -241,9 +258,6 @@ nav ul li:hover {
   height: 170px;
   margin-top: 20px;
   margin-left: 30px;
-  animation-name: slide-fade-in;
-  animation-iteration-count: 1;
-  animation-duration: 1s;
 }
 
 .burger {
@@ -268,6 +282,15 @@ nav ul li:hover {
 .line3 {
   height: 10px;
   border-bottom: 3px solid white;
+}
+
+@keyframes fade-in{
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
 }
 
 @keyframes slide-fade-in{
@@ -308,7 +331,7 @@ nav ul li:hover {
 }
 
 h1 {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Open Sans', sans-serif;
   text-transform: uppercase;
   color: #746965;
   font-size: 60px;
@@ -334,7 +357,7 @@ h1 {
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 30px;
   filter: grayscale(100%);
   margin-bottom: 50px;
@@ -380,7 +403,7 @@ h1 {
   justify-content: center;
   align-items: center;
   color: #746965;
-
+  cursor: pointer;
 }
 
 .yoga-class-element:hover {
@@ -432,6 +455,10 @@ nav{
 
   nav{
     padding: 0 30px;
+    animation-name: slide-fade-in;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    z-index: 5;
   }
 
   nav ul,
@@ -447,9 +474,6 @@ nav{
 
   .burger {
     display: inline-block;
-    animation-name: slide-fade-in;
-    animation-duration: 1s;
-    animation-iteration-count: 1;
   }
 
   nav {
