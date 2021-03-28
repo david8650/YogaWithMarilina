@@ -109,6 +109,7 @@ section {
 }
 body {
   line-height: 1;
+  width: 100%;
 }
 ol,
 ul {
@@ -131,7 +132,13 @@ table {
 }
 /*END CSS RESET*/
 
-.mobile-menu{
+body {
+  animation-name: fade-in;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+}
+
+.mobile-menu {
   display: none;
   height: 90vh;
   width: 60vw;
@@ -141,23 +148,9 @@ table {
   z-index: 2;
   background-color: white;
   border-radius: 0 0 0 200px;
-  box-shadow: -12px 14px 51px 9px rgba(0,0,0,0.75);
--webkit-box-shadow: -12px 14px 51px 9px rgba(0,0,0,0.75);
--moz-box-shadow: -12px 14px 51px 9px rgba(0,0,0,0.75);
-  
-}
-
-body{
-  animation-name: fade-in;
-  animation-duration: 1s;
-  animation-iteration-count: 1;
-}
-
-.centered{
-  width: 100%;
-  max-width: 1500px;
-  margin-left: auto;
-  margin-right: auto;
+  box-shadow: -12px 14px 51px 9px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: -12px 14px 51px 9px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -12px 14px 51px 9px rgba(0, 0, 0, 0.75);
 }
 
 /*START HEADER*/
@@ -166,8 +159,7 @@ header {
   background-position: center center;
   background-size: 100%;
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  justify-content: center;
 }
 
 #header-index {
@@ -182,7 +174,6 @@ header {
   width: 150px;
   display: flex;
   justify-content: space-around;
-
 }
 
 .socialmedia-bar img {
@@ -197,8 +188,9 @@ header {
 }
 
 nav {
-
   height: 100px;
+  width: 80vw;
+  max-width: 1500px;
   padding-top: 50px;
   display: flex;
   justify-content: space-around;
@@ -221,12 +213,11 @@ nav ul {
   flex-wrap: nowrap;
   color: white;
   font-size: 150%;
-  font-family: 'Nanum Gothic', sans-serif;
+  font-family: "Nanum Gothic", sans-serif;
   font-weight: 100;
   letter-spacing: 3px;
   margin-right: 20px;
   margin-left: 20px;
-
 }
 
 nav ul li {
@@ -250,14 +241,13 @@ nav ul li:hover {
 #logo {
   width: 250px;
   height: 170px;
-  margin-top: 20px;
-  margin-left: 30px;
 }
 
 .burger {
   display: none;
   height: 60px;
   width: 50px;
+  z-index: 100;
 }
 
 .burger:hover {
@@ -278,27 +268,29 @@ nav ul li:hover {
   border-bottom: 3px solid white;
 }
 
-.scrollDownGif{
-  position: relative;
+.scrollDownGif {
+  position: absolute;
   width: 50px;
   height: 50px;
+  top: 95%;
+  text-align: center;
+  margin: 0 auto;
   flex-direction: flex-end;
-  left: 50%;
   animation-name: fade-in;
   animation-duration: 5s;
   animation-iteration-count: 1;
 }
 
-@keyframes fade-in{
-  from{
+@keyframes fade-in {
+  from {
     opacity: 0;
   }
-  to{
+  to {
     opacity: 1;
   }
 }
 
-@keyframes slide-fade-in{
+@keyframes slide-fade-in {
   from {
     transform: translateY(-50px);
     opacity: 0;
@@ -320,7 +312,7 @@ nav ul li:hover {
   justify-content: center;
   align-items: center;
   text-align: center;
-  font-family: 'Nanum Gothic', sans-serif;
+  font-family: "Nanum Gothic", sans-serif;
   color: #82a3aa;
   font-size: 150%;
   line-height: 1.7;
@@ -330,9 +322,10 @@ nav ul li:hover {
   font-size: 3rem;
 }
 
-.welcomeMessageText{
+.welcomeMessageText {
   font-size: 1.5rem;
   padding: 20px;
+  max-width: 1500px;
 }
 
 /*END WELCOME MESSAGE SECTION*/
@@ -344,11 +337,10 @@ nav ul li:hover {
   background-color: #eeefe7;
   padding-top: 70px;
   padding-bottom: 70px;
-  
 }
 
 h1 {
-  font-family: 'Nanum Gothic', sans-serif;
+  font-family: "Nanum Gothic", sans-serif;
   text-transform: uppercase;
   color: #746965;
   font-size: 60px;
@@ -358,7 +350,7 @@ h1 {
   padding-bottom: 30px;
 }
 h2 {
-  font-family: 'Nanum Gothic', sans-serif;
+  font-family: "Nanum Gothic", sans-serif;
   text-transform: uppercase;
   color: #746965;
   font-size: 40px;
@@ -368,55 +360,63 @@ h2 {
   padding-bottom: 80px;
 }
 
-.yoga-class-container{
+.yoga-class-container {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-
 }
 
-.yoga-class-element{
+.yoga-class-element {
   width: 400px;
   height: 600px;
+  padding: 20px;
+  border-radius: 10px;
   color: #82a3aa;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
-  font-family: 'Nanum Gothic', sans-serif;
+  font-family: "Nanum Gothic", sans-serif;
   font-size: 30px;
 }
 
-.yoga-class-element-image{
+.yoga-class-element:hover {
+  background-color: white;
+  filter: drop-shadow(10px 2px 4px #0000002f);
+  transition-property: background-color filter;
+  transition-duration: 0.5s;
+}
+
+.yoga-class-element-image {
   width: 400px;
   height: 500px;
   background-position: center;
   background-size: cover;
 }
 
-.yoga-class-element:nth-child(1) .yoga-class-element-image{
-  background-image: url('./assets/pics/DSC_1342.JPG');
+.yoga-class-element:nth-child(1) .yoga-class-element-image {
+  background-image: url("./assets/pics/DSC_1342.JPG");
 }
 
-.yoga-class-element:nth-child(2) .yoga-class-element-image{
-  background-image: url('./assets/pics/DSC_1270.JPG');
+.yoga-class-element:nth-child(2) .yoga-class-element-image {
+  background-image: url("./assets/pics/DSC_1270.JPG");
 }
 
-.yoga-class-element:nth-child(3) .yoga-class-element-image{
-  background-image: url('./assets/pics/DSC_1207.JPG');
+.yoga-class-element:nth-child(3) .yoga-class-element-image {
+  background-image: url("./assets/pics/DSC_1207.JPG");
 }
 
-.yoga-class-element-title{
+.yoga-class-element-title {
   font-size: 40px;
-  color:#746965;
+  color: #746965;
   margin: 30px 0;
 }
-.yoga-class-element-description{
+.yoga-class-element-description {
   font-size: 20px;
-  color:#746965;
+  color: #746965;
 }
 
-.yoga-class-element-button{
+.yoga-class-element-button {
   width: 120px;
   height: 50px;
   background-color: rgba(61, 36, 2, 0.068);
@@ -430,22 +430,16 @@ h2 {
   cursor: pointer;
 }
 
-.yoga-class-element-button:hover{
+.yoga-class-element-button:hover {
   background: rgba(0, 0, 0, 0.089);
   border-color: rgba(255, 255, 255, 0.575);
   transition-property: background border-color;
   transition-duration: 1s;
 }
 
-.yoga-class-element:hover {
-  filter: grayscale(80%);
-  transition-property: filter;
-  transition-duration: 2s;
-}
-
 /*END CLASSES SECTION*/
 /*STUDIO SECTION*/
-.yoga-studio-section{
+.yoga-studio-section {
   background-color: #c9dddb;
   height: 100%;
   padding-top: 70px;
@@ -456,112 +450,112 @@ h2 {
   flex-direction: column;
 }
 
-.yoga-studio-section h1{
+.yoga-studio-section h1 {
   padding-bottom: 70px;
 }
 
-.yoga-studio-content{
+.yoga-studio-content {
   width: 80%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  font-family: 'Nanum Gothic', sans-serif;
+  font-family: "Nanum Gothic", sans-serif;
   font-size: 30px;
 }
 
-.yoga-studio-content img{
+.yoga-studio-content img {
   width: 60%;
   margin-bottom: 70px;
 }
 
-.yoga-studio-content p{
+.yoga-studio-content p {
   font-weight: 400;
   color: #746965;
   text-align: center;
 }
 
-
-
 /*----------------------------------------------------------------------------------------*/
 /*TABLET VIEW*/
-@media only screen and (max-width: 1300px){
-nav ul, .socialmedia-bar{
-  display: none;
-  transition-property: display;
-  transition-duration: 1s;
-}
+@media only screen and (max-width: 1300px) {
+  nav ul,
+  .socialmedia-bar {
+    display: none;
+    transition-property: display;
+    transition-duration: 1s;
+  }
 
-.burger{
-  display: inline-block;
-  margin-right: 20px;
-}
+  .burger {
+    display: inline-block;
+    margin-right: 20px;
+  }
 
-nav{
-  justify-content: space-between;
-  margin: 0 40px;
-}
+  nav {
+    animation-name: slide-fade-in;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    width: 85%;
+    z-index: 5;
+    height: 100px;
+    justify-content: space-between;
+  }
 
-header{
-  max-height: 500px;
-}
+  header {
+    height: 60vh;
+  }
 
-.centered{
-  margin: 10px 50px;
-}
+  .centered {
+    margin: 10px 50px;
+  }
 
-
-.classes-section{
+  .classes-section {
     height: 100%;
-}
+  }
 
-.yoga-class-container{
+  .yoga-class-container {
     flex-direction: column;
-}
+  }
 
-.yoga-class-element{
-  padding-bottom: 20px;
-}
+  .yoga-class-element {
+    padding-bottom: 20px;
+  }
 }
 /*END TABLET VIEW*/
 /*----------------------------------------------------------------------------------------*/
 /*MOBILE VIEW*/
 @media only screen and (max-width: 600px) {
-
-  html, body {
+  html,
+  body {
     overflow: auto !important;
-}
-
-  body{
+    overflow-x: hidden;
+  }
+  body {
     position: absolute;
   }
   /*MOBILE HEADER*/
   header {
-    height: 100vw;
+    height: 80vh;
     background-repeat: no-repeat;
     background-size: cover;
   }
 
-  nav{
-    padding: 0 30px;
+  nav {
     animation-name: slide-fade-in;
     animation-duration: 1s;
     animation-iteration-count: 1;
+    width: 85%;
     z-index: 5;
-    width: 100%;
     height: 100px;
-    padding-top: 10px;
-    margin: 0 0;
     justify-content: space-between;
   }
 
-.centered{
-    margin: 0;
+  .centered {
+    margin: 0 auto;
     padding: 0;
   }
 
   nav ul,
- .socialmedia-bar {
+  .socialmedia-bar {
     display: none;
   }
 
@@ -573,34 +567,60 @@ header{
 
   .burger {
     display: inline-block;
+    margin: 0;
   }
 
   /*END MOBILE HEADER*/
 
   /*MOBILE WELCOME MESSAGE*/
-  .welcomeMessageText{
+  .welcomeMessageText {
     font-size: 1.25rem;
+    text-align: justify;
+    padding: 0 50px;
   }
   /*END MOBILE WELCOME MESSAGE*/
 
   /*MOBILE CLASSES SECTION*/
 
-  .classes-section{
+  .classes-section {
     height: 100%;
   }
 
-  .yoga-class-container{
+  .classes-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .yoga-class-container {
     flex-direction: column;
- 
   }
 
-  .yoga-class-element{
-    padding-bottom: 20px;
-  }
-
-  .classes-section h1, h2{
+  .classes-section h1,
+  h2 {
     font-size: 40px;
+    padding-bottom: 30px;
   }
+
+  .yoga-class-element {
+    width: 100%;
+    padding: 0 0 30px 0;
+  }
+
+  .yoga-class-element-image {
+    width: 90vw;
+  }
+
+  .yoga-class-element-title {
+    margin: 0;
+    padding: 30px 0;
+    font-size: 2rem;
+  }
+  .yoga-class-element-description {
+    padding-bottom: 30px;
+  }
+  .yoga-class-element-button {
+    margin: 0;
+  }
+
   /*END MOBILE CLASSES SECTION*/
 }
 /*END MOBILE VIEW*/
