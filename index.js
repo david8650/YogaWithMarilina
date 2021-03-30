@@ -1,4 +1,3 @@
-
 //Animate elements on scroll
 gsap.to(".welcomeMessageTitle", { y: 50, duration: 0 });
 gsap.to(".welcomeMessageText", { opacity: 0, duration: 0 });
@@ -23,7 +22,8 @@ window.addEventListener("scroll", () => {
       opacity: 1,
       y: 0,
       stagger: 0.3,
-      duration: 2,
+      duration: 1,
     });
   }
 });
+//
