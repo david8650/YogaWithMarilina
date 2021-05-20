@@ -112,10 +112,10 @@ body {
   width: 100%;
 }
 ol,
-ul {
+blockquote,
+ul{
   list-style: none;
 }
-blockquote,
 q {
   quotes: none;
 }
@@ -153,6 +153,17 @@ body {
   -moz-box-shadow: -12px 14px 51px 9px rgba(0, 0, 0, 0.75);
 }
 
+.flex-row{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.flex-column{
+  display: flex;
+  flex-direction: column;
+}
+
 /*START HEADER*/
 header {
   height: 100vh;
@@ -163,14 +174,14 @@ header {
 }
 
 #header-index {
-  background-image: url("./assets/pics/header-pic.jpg");
+  background-image: url("./assets/images/header-pic.jpg");
   position: relative;
   display: flex;
   justify-content: center;
 }
 
 #header-classes {
-  background-image: url("./assets/pics/DSC_1270.JPG");
+  background-image: url("./assets/images/DSC_1270.JPG");
 }
 
 .socialmedia-bar {
@@ -208,7 +219,7 @@ nav {
 }
 
 nav ul {
-  width: 60%;
+  width: 70%;
   height: 100px;
   display: flex;
   justify-content: space-around;
@@ -272,11 +283,10 @@ nav ul li:hover {
 }
 
 .scrollDownGif {
-  position: relative;
+  position: absolute;
   width: 50px;
   height: 50px;
-  top: 95%;
-  right: 40%;
+  top: 90%;
   text-align: center;
   margin: 0;
   flex-direction: flex-end;
@@ -315,7 +325,7 @@ nav ul li:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
+  
   font-family: "Nanum Gothic", sans-serif;
   color: #82a3aa;
   font-size: 150%;
@@ -324,12 +334,12 @@ nav ul li:hover {
 
 .welcomeMessageTitle {
   font-size: 3rem;
+  text-align: center;
 }
 
-.welcomeMessageText {
-  font-size: 1.5rem;
-  padding: 20px;
-  max-width: 1500px;
+.welcomeMessage-content{
+  width: 80%;
+  text-align: center;
 }
 
 /*END WELCOME MESSAGE SECTION*/
@@ -345,6 +355,10 @@ nav ul li:hover {
   justify-content: center;
 }
 
+.classes-section-content {
+  width: 80%;
+}
+
 h1 {
   font-family: "Nanum Gothic", sans-serif;
   text-transform: uppercase;
@@ -355,6 +369,7 @@ h1 {
   text-align: center;
   padding-bottom: 30px;
 }
+
 h2 {
   font-family: "Nanum Gothic", sans-serif;
   text-transform: uppercase;
@@ -373,7 +388,7 @@ h2 {
 }
 
 .yoga-class-element {
-  width: 400px;
+  width: 30%;
   height: 600px;
   padding: 20px;
   border-radius: 10px;
@@ -387,32 +402,37 @@ h2 {
 }
 
 .yoga-class-element:hover {
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.856);
   filter: drop-shadow(10px 2px 4px #0000002f);
   transition-property: background-color filter;
   transition-duration: 0.5s;
+  cursor: pointer;
 }
 
 .yoga-class-element-image {
-  width: 400px;
-  height: 500px;
+  width: 100%;
+  height: 300px;
   background-position: center;
   background-size: cover;
 }
 
 .yoga-class-element:nth-child(1) .yoga-class-element-image {
-  background-image: url("./assets/pics/DSC_1342.JPG");
+  background-image: url("./assets/images/deck-yoga-standing.jpeg");
 }
 
 .yoga-class-element:nth-child(2) .yoga-class-element-image {
-  background-image: url("./assets/pics/DSC_1270.JPG");
+  background-image: url("./assets/images/yoga-private.jpeg");
 }
 
 .yoga-class-element:nth-child(3) .yoga-class-element-image {
-  background-image: url("./assets/pics/DSC_1207.JPG");
+  background-image: url("./assets/images/private-group-class.jpeg");
 }
 
 .yoga-class-element-title {
+  height: 90px;
+  display: flex;
+  align-items: center;
+  text-align: center;
   font-size: 40px;
   color: #746965;
   margin: 30px 0;
@@ -420,13 +440,14 @@ h2 {
 .yoga-class-element-description {
   font-size: 20px;
   color: #746965;
+  text-align: center;
 }
 
 .yoga-class-element-button {
   width: 120px;
   height: 50px;
-  background-color: rgba(61, 36, 2, 0.068);
   border-radius: 30px;
+  border: 1px solid #746965;
   margin-top: 40px;
   font-size: 20px;
   display: flex;
@@ -437,7 +458,7 @@ h2 {
 }
 
 .yoga-class-element-button:hover {
-  background: rgba(0, 0, 0, 0.089);
+  background: rgba(0, 0, 0, 0.048);
   border-color: rgba(255, 255, 255, 0.575);
   transition-property: background border-color;
   transition-duration: 1s;
@@ -462,49 +483,254 @@ h2 {
 }
 
 .class-element:nth-child(1) .class-image {
-  background-image: url('./assets/pics/DSC_1207.JPG');
-  width: 400px;
-  height: 400px;
+  background-image: url('./assets/images/DSC_1207.JPG');
+  background-position: center;
+  background-size: cover;
+  width: 40%;
+  height: 300px;
 }
-
 /*END CLASSES SECTION*/
-/*STUDIO SECTION*/
-.yoga-studio-section {
+
+/*YOGA IN SAGRES SECTION*/
+.yoga-in-sagres-section {
   background-color: #c9dddb;
   height: 100%;
-  padding-top: 70px;
-  padding-bottom: 70px;
+  padding: 70px 0px 150px 0px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 
-.yoga-studio-section h1 {
+.yoga-in-sagres-section h1 {
   padding-bottom: 70px;
 }
 
-.yoga-studio-content {
-  width: 80%;
+.yoga-in-sagres-content {
+  width: 70%;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  align-items: left;
   flex-direction: column;
   font-family: "Nanum Gothic", sans-serif;
   font-size: 30px;
 }
 
-.yoga-studio-content img {
-  width: 60%;
-  margin-bottom: 70px;
-}
-
-.yoga-studio-content p {
+.yoga-in-sagres-content p {
   font-weight: 400;
   color: #746965;
+  text-align: left;
+  line-height: 1.5em;
+  padding-right: 5px;
+}
+
+.yoga-in-sagres-content span {
+  text-align: left;
+  line-height: 1.5em;
+  color: #746965;
+}
+
+.yoga-in-sagres-content img {
+  width: 55%;
+  border-radius: 10px;
+}
+.yoga-in-sagres-button{
+  width: 150px;
+  height: 50px;
+  border-radius: 30px;
+  border: 1px solid #746965;
+  margin-top: 40px;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #746965;
+  cursor: pointer;
+}
+
+.yoga-in-sagres-button:hover {
+  background: rgba(0, 0, 0, 0.048);
+  border-color: rgba(124, 124, 124, 0.575);
+  transition-property: background border-color;
+  transition-duration: 1s;
+}
+
+/*END YOGA IN SAGRES SECTION*/
+
+/*COLLABORATIONS SECTION*/
+.collaborations-section{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 70px 0;
+}
+
+.collaborations-section h1{
+  padding-bottom: 70px;
+}
+
+.collaborations-content{
+  display: flex;
+  width: 80%;
+  justify-content: space-around; 
+  align-items: center;
+}
+
+#chicksonwavesLogo{
+  width: 20%;
+}
+
+#chicksonwavesLogo img{
+  width: 100%;
+}
+
+#chicksonwavesLogo:hover{
+  border-radius: 50px;
+  background-color: rgba(255, 255, 255, 0.856);
+  filter: drop-shadow(10px 2px 4px #0000002f);
+  transition-property: background-color filter;
+  transition-duration: 0.5s;
+  cursor: pointer;
+}
+
+#yogalitiousLogo{
+  width: 50%;  
+}
+
+#yogalitiousLogo img{
+  width: 100%;
+}
+
+#yogalitiousLogo:hover{
+  border-radius: 50px;
+  background-color: rgba(255, 255, 255, 0.856);
+  filter: drop-shadow(10px 2px 4px #0000002f);
+  transition-property: background-color filter;
+  transition-duration: 0.5s;
+  cursor: pointer;
+}
+
+#goseaclubLogo{
+  width: 20%;
+}
+
+#goseaclubLogo img{
+  width: 100%;
+}
+
+#goseaclubLogo:hover{
+  border-radius: 50px;
+  background-color: rgba(255, 255, 255, 0.856);
+  filter: drop-shadow(10px 2px 4px #0000002f);
+  transition-property: background-color filter;
+  transition-duration: 0.5s;
+  cursor: pointer;
+}
+
+/*END COLLABORATIONS SECTION*/
+
+
+/*START FOOTER SECTION*/
+.footer-section{
+  background-color: #decba7;
+  height: 100%;
+  font-family: "Nanum Gothic", sans-serif;
+  color: #746965;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.footer-content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 80%;
+}
+
+.footer-content .flex-row{
+  display: flex;
+  flex-direction: row;
+}
+
+.row1 {
+  height: 200px;
+  display: flex;
+  align-items: center;
+  line-height: 2em;
+}
+
+.footer-content img{
+  width: 30%;
+}
+
+.footer-title{
+  display: flex;
+  flex-direction: column;
   text-align: center;
 }
 
+h3{
+  font-size: 2rem;
+}
+
+.footer-content .socialmedia-bar{
+  width: 20%;
+  display: flex;
+  justify-items: space-between;
+}
+
+.footer-content .socialmedia-bar img{
+  width: 50%;
+}
+
+.footer-nav{
+  width: 50%;
+  margin-bottom: 100px;
+}
+.footer-nav ul{
+  display: flex;
+  height: 40px;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2em;
+  color: #746965;
+}
+
+.footer-nav ul a{
+  color: #746965;
+  margin: 5px;
+}
+
+.footer-nav ul li{
+  margin: 5px;
+}
+
+.footer-nav li:hover{
+    border: 1px solid #746965;
+    background-color: rgba(255, 255, 255, 0.212);
+    transition-property: border background-color;
+    transition-duration: 1s;
+  }
+
+#credits{
+  justify-self: flex-end;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*END DESKTOP VIEW*/
 /*----------------------------------------------------------------------------------------*/
 /*TABLET VIEW*/
 @media only screen and (max-width: 1300px) {
@@ -546,9 +772,8 @@ h2 {
   }
 
   .scrollDownGif{
-    position: relative;
+    position: absolute;
     top: 90%;
-    left: -45%;
   }
 
   .classes-section {
@@ -615,10 +840,8 @@ h2 {
   }
 
   .scrollDownGif{
-    position: relative;
+    position: absolute;
     top: 90%;
-    left: -50%;
-
   }
 
   /*END MOBILE HEADER*/
@@ -675,3 +898,4 @@ h2 {
   /*END MOBILE CLASSES SECTION*/
 }
 /*END MOBILE VIEW*/
+/*----------------------------------------------------------------------------------------*/
