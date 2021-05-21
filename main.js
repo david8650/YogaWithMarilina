@@ -27,7 +27,7 @@ window.addEventListener("scroll", () => {
       opacity: 1,
       y: 0,
       stagger: 0.3,
-      duration: 1,
+      duration: 3,
     });
   }
   if (window.scrollY >= 1700) {
@@ -39,12 +39,12 @@ window.addEventListener("scroll", () => {
   if (window.scrollY >= 2800) {
     gsap.to(".collaborations-h1", { opacity: 1, y: 0, duration: 3 });
   }
-  if (window.scrollY >= 3000) {
+  if (window.scrollY >= 3200) {
     gsap.to(".collaborations-element", { 
       opacity: 1, 
       y: 0, 
-      stagger: 2,
-      duration: 2,
+      stagger: 0.8,
+      duration: 3,
     });
   }
 
