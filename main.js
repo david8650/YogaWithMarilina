@@ -1,5 +1,5 @@
 //Animate Elements On Scroll - index.html
-if(window.location.pathname === "/index.html"){
+
 gsap.to(".welcomeMessageTitle", { y: 50, duration: 0 });
 gsap.to(".welcomeMessageText", { opacity: 0, duration: 0 });
 gsap.to(".classes-section-h1", { opacity: 0, y: 50, duration: 0 });
@@ -49,4 +49,4 @@ window.addEventListener("scroll", () => {
   }
 
 });
-}
+
