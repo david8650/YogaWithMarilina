@@ -192,6 +192,10 @@ header {
 
 .socialmedia-bar img {
   width: 40px;
+  background-color: transparent;
+  border-radius: 10px;
+  transition-property: background-color;
+  transition-duration: 1s;
 }
 
 .socialmedia-bar img:hover {
@@ -243,6 +247,9 @@ nav ul li {
   border: 1px solid transparent;
   padding: 10px;
   cursor: pointer;
+
+  transition-property: border background-color;
+  transition-duration: 1s;
 }
 
 nav ul li:hover {
@@ -500,7 +507,7 @@ h2 {
 }
 
 .yoga-class-item{
-  width: 80%;
+  width: 100%;
   height: 400px;
   display: flex;
   background: white;
@@ -522,6 +529,12 @@ h2 {
   width: 40%;
   display:inline-flex;
   margin: 20px;
+}
+
+.yoga-class-item-content{
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
 }
 
 .private-sessions{
@@ -814,11 +827,15 @@ h2 {
 .footer-nav ul li {
   margin: 5px;
   padding: 10px;
+  background-color: transparent;
+  transition-property: background-color;
+  transition-duration: 1s;
 }
 
 .footer-nav li:hover {
   background-color: rgba(255, 255, 255, 0.301);
   border-radius: 5px;
+  cursor: pointer;
   transition-property: background-color;
   transition-duration: 1s;
 }
