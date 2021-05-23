@@ -1,4 +1,4 @@
-//Animate Elements On Scroll - index.html
+//Animate Elements On Scroll
 gsap.to(".welcomeMessageTitle", { y: 50, duration: 0 });
 gsap.to(".welcomeMessageText", { opacity: 0, duration: 0 });
 gsap.to(".classes-section-h1", { opacity: 0, y: 50, duration: 0 });
@@ -49,3 +49,16 @@ window.addEventListener("scroll", () => {
 
 });
 
+var swiper = new Swiper(".mySwiper", {
+  slidesPerView: 2,
+  spaceBetween: 30,
+  loop: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
