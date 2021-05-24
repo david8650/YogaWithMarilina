@@ -1,5 +1,5 @@
-//Animate Elements On Scroll
-gsap.to(".welcomeMessageTitle", { y: 50, duration: 0 });
+//Set Elements' Initial State
+gsap.to(".welcomeMessageTitle", { y: 80, duration: 0 });
 gsap.to(".welcomeMessageText", { opacity: 0, duration: 0 });
 gsap.to(".classes-section-h1", { opacity: 0, y: 50, duration: 0 });
 gsap.to(".classes-section-h2", { opacity: 0, y: 50, duration: 0 });
@@ -8,49 +8,124 @@ gsap.to(".yoga-in-sagres-h1", { opacity: 0, y: 50, duration: 0 });
 gsap.to(".yoga-in-sagres-content", { opacity: 0, y: 100, duration: 0 });
 gsap.to(".collaborations-h1", { opacity: 0, y: 100, duration: 0 });
 gsap.to(".collaborations-element", { opacity: 0, y: 200, duration: 0 });
+gsap.to(".testimonials-h1", { x: 4000, duration: 0 });
+gsap.to(".mySwiper", { x: -4000, duration: 0, });
 
-window.addEventListener("scroll", () => {
-  console.log(`Scroll position: ${Math.floor(window.scrollY)}`);
-  if (window.scrollY >= 450) {
-    gsap.to(".welcomeMessageTitle", { opacity: 1, y: 0, duration: 2 });
-    gsap.to(".welcomeMessageText", { opacity: 1, duration: 3 });
-  }
-  if (window.scrollY >= 620) {
-    gsap.to(".classes-section-h1", { opacity: 1, y: 0, duration: 3 });
-  }
-  if (window.scrollY >= 650) {
-    gsap.to(".classes-section-h2", { opacity: 1, y: 0, duration: 3 });
-  }
-  if (window.scrollY >= 1100) {
-    gsap.to(".yoga-class-element", {
-      opacity: 1,
-      y: 0,
-      stagger: 0.3,
-      duration: 3,
-    });
-  }
-  if (window.scrollY >= 1700) {
-    gsap.to(".yoga-in-sagres-h1", { opacity: 1, y: 0, duration: 3 });
-  }
-  if (window.scrollY >= 2000) {
-    gsap.to(".yoga-in-sagres-content", { opacity: 1, y: 0, duration: 3 });
-  }
-  if (window.scrollY >= 2800) {
-    gsap.to(".collaborations-h1", { opacity: 1, y: 0, duration: 3 });
-  }
-  if (window.scrollY >= 3200) {
-    gsap.to(".collaborations-element", { 
-      opacity: 1, 
-      y: 0, 
-      stagger: 0.8,
-      duration: 3,
-    });
-  }
 
+//Animate Elements' State On Scroll
+gsap.to(".welcomeMessageTitle", {
+  scrollTrigger: {
+    trigger: ".welcomeMessageTitle",
+    start: "center 50%",
+  },
+  y: 0, 
+  duration: 2,
 });
 
+gsap.to(".welcomeMessageText", { 
+  scrollTrigger: {
+    trigger: ".welcomeMessageTitle",
+    start: "center 50%",
+  },
+  opacity: 1, 
+  duration: 2,
+});
+
+gsap.to(".classes-section-h1", { 
+  scrollTrigger: {
+    trigger: ".classes-section-h1",
+    start: "center 50%",
+  },
+  opacity: 1, 
+  y: 0, 
+  duration: 3,
+});
+
+gsap.to(".classes-section-h2", { 
+  scrollTrigger: {
+    trigger: ".classes-section-h2",
+    start: "center 60%",
+  },
+  opacity: 1, 
+  y: 0, 
+  duration: 3,
+});
+
+gsap.to(".yoga-class-element", {
+  scrollTrigger: {
+    trigger: ".yoga-class-element",
+    start: "center 90%",
+  },
+  opacity: 1,
+  y: 0,
+  stagger: 0.8,
+  duration: 2,
+});
+
+gsap.to(".yoga-in-sagres-h1", 
+{ scrollTrigger: {
+    trigger: ".yoga-in-sagres-h1",
+    start: "center 50%",
+  },
+  opacity: 1, 
+  y: 0, 
+  duration: 3,
+});
+
+gsap.to(".yoga-in-sagres-content", { 
+  scrollTrigger: {
+    trigger: ".yoga-in-sagres-content",
+    start: "center 90%",
+  },
+  opacity: 1, 
+  y: 0, 
+  duration: 3,
+});
+
+gsap.to(".testimonials-h1", {
+  scrollTrigger: {
+    trigger: ".testimonials-h1",
+    start: "center 80%",
+  },
+  x: 0,
+  duration: 2.5,
+  ease: "power4.out",
+});
+
+gsap.to(".mySwiper", {
+  scrollTrigger: {
+    trigger: ".testimonials-h1",
+    start: "center 80%",
+  },
+  x: 0,
+  duration: 2.5,
+  ease: "power4.out",
+});
+
+gsap.to(".collaborations-h1", { 
+  scrollTrigger: {
+    trigger: ".collaborations-h1",
+    start: "center 80%",
+  },
+  opacity: 1, 
+  y: 0, 
+  duration: 2,
+});
+
+gsap.to(".collaborations-element", { 
+  scrollTrigger: {
+    trigger: ".collaborations-element",
+    start: "center 100%",
+  },
+  opacity: 1, 
+  y: 0, 
+  duration: 2,
+});
+
+
+
 var swiper = new Swiper(".mySwiper", {
-  slidesPerView: 2,
+  slidesPerView: 3,
   spaceBetween: 30,
   loop: true,
   pagination: {
