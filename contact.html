@@ -9,22 +9,23 @@
   <!--CSS-->
   <link rel="stylesheet" href="style.css" />
   <!--Font-->
-  <link rel="preconnect" href="https://fonts.gstatic.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
   <!--SwiperJS CSS-->
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <!--Favicon-->
   <link rel="icon" href="./assets/logo/yoga-with-marilina.png" />
+  <script src="./contact.js" defer></script>
 </head>
 
 <body>
   <!--MOBILE MENU-->
   <div class="mobile-menu">
     <ul class="mobile-menu-list">
-        <li><a href="index.html">HOME</a></li>
-        <li><a href="./yoga-classes.html">CLASSES</a></li>
-        <li><a href="./about-me.html">ABOUT ME</a></li>
-        <li><a href="./contact.html">CONTACT</a></li>
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="./yoga-classes.html">CLASSES</a></li>
+      <li><a href="./about-me.html">ABOUT ME</a></li>
+      <li><a href="./contact.html">CONTACT</a></li>
     </ul>
   </div>
 
@@ -59,6 +60,33 @@
   </header>
   <!--END HEADER SECTION-->
 
+  <!--CONTACT ME SECTION-->
+
+  <div class="contact-me-section">
+    <div class="contact-me-content">
+      <h1 class="contact-me-h1">Contact Me</h1>
+      <form method="post" name="contact_form" action="contact-form-handler.php">
+            <div class="flex-row">
+              <input class="form-input" type="text" id="fname" name="fname" placeholder="First Name">
+              <input class="form-input" type="text" id="lname" name="lname" placeholder="Last Name">
+            </div>
+            <div class="flex-row">
+              <input class="form-input" type="email" id="email" name="email" placeholder="Email">
+            </div>
+
+            <div class="flex-row">
+              <textarea class="form-input" cols="70" rows="20" id="message" name="message" placeholder="Message"></textarea>
+            </div>
+
+          <div class="flex-row">
+            <input class="form-input form-button" type="submit" id="submit" name="submit">
+            <input class="form-input form-button" type="button" id="clear" name="clear" value="Clear">
+          </div>
+    </form>
+  </div>
+  </div>
+
+  <!--END CONTACT ME SECTION-->
 
   <!--FOOTER SECTION-->
   <div class="footer-section">

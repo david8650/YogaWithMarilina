@@ -1,5 +1,5 @@
 //Set Elements' Initial State
-gsap.to(".welcomeMessageTitle", { y: 80, duration: 0 });
+gsap.to(".welcomeMessageTitle", { y: 50, duration: 0 });
 gsap.to(".welcomeMessageText", { opacity: 0, duration: 0 });
 gsap.to(".classes-section-h1", { opacity: 0, y: 50, duration: 0 });
 gsap.to(".classes-section-h2", { opacity: 0, y: 50, duration: 0 });
@@ -28,7 +28,7 @@ gsap.to(".collaborations-element", { scrollTrigger: { trigger: ".collaborations
 
 //SwiperJS Settings for Testimonials Section
 var swiper = new Swiper(".mySwiper", {
-  slidesPerView: 3,
+  slidesPerView: 2,
   spaceBetween: 30,
   loop: true,
   pagination: {
