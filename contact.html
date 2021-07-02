@@ -69,21 +69,21 @@
       <!--FORMSPREE FORM-->
       <form action="https://formspree.io/f/mzbyvjnk" method="POST">
         <label>
-          Name:
-          <input tyoe="text" name="name">
+          <input type="text" name="name" placeholder="Name">
         </label>
         <label>
-          Your email:
-          <input type="email" name="_replyto">
+          <input type="email" name="_replyto" placeholder="Email">
         </label>
         <label>
-          Your message:
-          <textarea name="message"></textarea>
+          <textarea name="message" placeholder="Your Message"></textarea>
         </label>
 
         <!-- your other form fields go here -->
+        <div class="form-buttons"> 
+          <button type="submit">Send</button>
+          <button type="reset" id="clear">Clear</button>
+        </div>
 
-        <button type="submit">Send</button>
       </form>
 
       <!-- CUSTOME MADE FORM
