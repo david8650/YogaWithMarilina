@@ -878,11 +878,12 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-
+  width: 100%;
 }
 
 .contact-me-content{
-  width: 40%;
+  width: 50%;
+  max-width: 700px;
 }
 
 .contact-me-h1{
@@ -933,6 +934,7 @@ h2 {
 
 .contact-me-content form button{
   font-family: "Nanum Gothic", sans-serif;
+  font-size: 1.1rem;
   width: 40%;
   padding: 10px;
   margin: 10px auto;
@@ -1057,67 +1059,8 @@ h2 {
 /*----------------------------------------------------------------------------------------*/
 /*TABLET VIEW*/
 @media only screen and (max-width: 1300px) {
-  nav ul,
-  .socialmedia-bar {
-    display: none;
-    transition-property: display;
-    transition-duration: 1s;
-  }
-
-  .burger {
-    display: inline-block;
-    margin-right: 20px;
-  }
-
-  nav {
-    height: 100px;
-    width: 80vw;
-    max-width: 1500px;
-    padding-top: 50px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    font-weight: lighter;
-    white-space: nowrap;
-    margin-right: 20px;
-    margin-left: 20px;
-    animation-name: slide-fade-in;
-    animation-iteration-count: 1;
-    animation-duration: 2s;
-  }
-
-  header {
-    height: 100vh;
-  }
-
-  .centered {
-    margin: 10px 50px;
-  }
-
-  .scrollDownGif {
-    position: absolute;
-    top: 90%;
-  }
-
-  .classes-section {
-    height: 100%;
-  }
-
-  .yoga-class-container {
-    flex-direction: column;
-  }
-
-  .yoga-class-element {
-    padding-bottom: 20px;
-  }
-}
-/*END TABLET VIEW*/
-/*----------------------------------------------------------------------------------------*/
-/*MOBILE VIEW*/
-@media only screen and (max-width: 600px) {
   html,
   body {
-    overflow: auto !important;
     overflow-x: hidden;
   }
   body {
@@ -1125,7 +1068,7 @@ h2 {
   }
   /*MOBILE HEADER*/
   header {
-    height: 80vh;
+    height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
     text-align: center;
@@ -1200,6 +1143,128 @@ h2 {
   .yoga-class-element {
     width: 100%;
     padding: 0 0 30px 0;
+  }
+
+  .yoga-class-element-image {
+    width: 90vw;
+  }
+
+  .yoga-class-element-title {
+    margin: 0;
+    padding: 30px 0;
+    font-size: 2rem;
+    
+  }
+  .yoga-class-element-description {
+    padding-bottom: 30px;
+    min-height: 40px;
+  }
+  .yoga-class-element-button {
+    margin: 0;
+  }
+
+  /*END MOBILE CLASSES SECTION*/
+}
+/*END TABLET VIEW*/
+/*----------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------*/
+/*MOBILE VIEW*/
+@media only screen and (max-width: 600px) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
+  body {
+    position: absolute;
+  }
+  /*MOBILE HEADER*/
+  header {
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+  }
+
+  nav {
+    animation-name: slide-fade-in;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    width: 85%;
+    z-index: 5;
+    height: 100px;
+    justify-content: space-between;
+  }
+
+  .centered {
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  nav ul,
+  .socialmedia-bar {
+    display: none;
+  }
+
+  #logo {
+    width: 150px;
+    height: 100px;
+    margin: 0;
+  }
+
+  .burger {
+    display: inline-block;
+    margin: 0;
+  }
+
+  .scrollDownGif {
+    position: absolute;
+    top: 90%;
+  }
+
+  /*END MOBILE HEADER*/
+
+  /*MOBILE WELCOME MESSAGE*/
+
+  .welcomeMessageTitle{
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  .welcomeMessageText {
+    font-size: 1.25rem;
+    text-align: justify;
+    padding: 0;
+  }
+  /*END MOBILE WELCOME MESSAGE*/
+
+  /*MOBILE CLASSES SECTION*/
+
+  .classes-section {
+    height: 100%;
+  }
+
+  .classes-section h1 {
+    margin: 0;
+  }
+
+  .classes-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .yoga-class-container {
+    flex-direction: column;
+  }
+
+  .yoga-class-element {
+    width: 100%;
+    padding: 0 0 30px 0;
+  }
+
+  .yoga-class-element:hover {
+    background-color: none;
+    filter: drop-shadow(10px 10px 4px #0000002f);
+    padding: 0px;
   }
 
   .yoga-class-element-image {

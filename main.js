@@ -1,5 +1,5 @@
 //Set Elements' Initial State
-gsap.to(".welcomeMessageTitle", { y: 50, duration: 0 });
+gsap.to(".welcomeMessageTitle", { y: 100, duration: 0 });
 gsap.to(".welcomeMessageText", { opacity: 0, duration: 0 });
 gsap.to(".classes-section-h1", { opacity: 0, y: 50, duration: 0 });
 gsap.to(".classes-section-h2", { opacity: 0, y: 50, duration: 0 });
@@ -14,7 +14,7 @@ gsap.to(".mySwiper", { x: -4000, duration: 0, });
 
 //Animate Elements' State On Scroll
 gsap.to(".welcomeMessageTitle", { scrollTrigger: { trigger: ".welcomeMessageTitle", start: "center 50%", }, y: 0, duration: 2, });
-gsap.to(".welcomeMessageText", { scrollTrigger: { trigger: ".welcomeMessageTitle", start: "center 50%", }, opacity: 1, duration: 2, });
+gsap.to(".welcomeMessageText", { scrollTrigger: { trigger: ".welcomeMessageTitle", start: "center 50%", }, opacity: 1, duration: 2.5, });
 gsap.to(".classes-section-h1", { scrollTrigger: { trigger: ".classes-section-h1", start: "center 50%", }, opacity: 1, y: 0, duration: 3, });
 gsap.to(".classes-section-h2", { scrollTrigger: { trigger: ".classes-section-h2", start: "center 60%", }, opacity: 1, y: 0, duration: 3, });
 gsap.to(".yoga-class-element", { scrollTrigger: { trigger: ".yoga-class-element", start: "center 90%", }, opacity: 1, y: 0, stagger: 0.8, duration: 2, });
