@@ -1,5 +1,5 @@
 //Set Elements' Initial State
-gsap.to(".welcomeMessageTitle", { y: 100, duration: 0 });
+gsap.to(".welcomeMessageTitle", { y: 50, duration: 0 });
 gsap.to(".welcomeMessageText", { opacity: 0, duration: 0 });
 gsap.to(".classes-section-h1", { opacity: 0, y: 50, duration: 0 });
 gsap.to(".classes-section-h2", { opacity: 0, y: 50, duration: 0 });
