@@ -1057,8 +1057,9 @@ h2 {
 
 /*END DESKTOP VIEW*/
 /*----------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------*/
 /*TABLET VIEW*/
-@media only screen and (max-width: 1300px) {
+@media only screen and (max-width: 1100px) {
   html,
   body {
     overflow-x: hidden;
@@ -1120,7 +1121,7 @@ h2 {
   }
   /*END MOBILE WELCOME MESSAGE*/
 
-  /*MOBILE CLASSES SECTION*/
+  /*TABLET CLASSES SECTION*/
 
   .classes-section {
     height: 100%;
@@ -1138,15 +1139,18 @@ h2 {
   h2 {
     font-size: 40px;
     padding-bottom: 30px;
+    margin-bottom: 0;
   }
 
   .yoga-class-element {
-    width: 100%;
-    padding: 0 0 30px 0;
+    width: 90%;
+    padding: 20px;
+    margin-bottom: 50px;
+    background: white;
   }
 
   .yoga-class-element-image {
-    width: 90vw;
+    width: 100%;
   }
 
   .yoga-class-element-title {
